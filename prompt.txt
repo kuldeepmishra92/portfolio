@@ -1,0 +1,4 @@
+Goal: Develop a premium, futuristic portfolio website for a Video Editor and Graphic Designer.
+Theme: Dark, Purple Neon.
+Vibe: High-end, tech-focused.
+Status: Implemented and reorganized for Flask.

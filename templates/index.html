@@ -1,0 +1,376 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<header id="home" class="hero">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1400px; margin: 0 auto; transition: transform 0.3s ease;">
+            <!-- Left Side: Text Content -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🎬</span>
+                    <span class="badge-text">Premium Video Editor & Content Creator</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-main">Turn Your Videos Into</span>
+                    <span class="title-highlight">Viral Hits</span>
+                </h1>
+                <p class="hero-description">
+                    Professional video editing, scroll-stopping thumbnails, and eye-catching graphics
+                    that boost engagement, grow your audience, and maximize your content's potential.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Videos Edited</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50M+</span>
+                        <span class="stat-label">Total Views Generated</span>
+                    </div>
+                </div>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn btn-primary">See My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Start Your Project</a>
+                </div>
+            </div>
+
+            <!-- Right Side: 3D Hero Image with VanillaTilt -->
+            <div class="hero-visual">
+                <div class="pfp-card">
+                    <img src="{{ url_for('static', filename='images/WhatsApp Image 2026-02-01 at 4.28.23 PM.jpeg') }}" 
+                         alt="Video Editor Portfolio">
+                    
+                    <!-- Holographic Border -->
+                    <div class="card-border"></div>
+                    
+                    <!-- 3D Floating Doodles -->
+                    <div class="card-doodles">
+                        <div class="doodle d-play">▶️</div>
+                        <div class="doodle d-edit">✂️</div>
+                        <div class="doodle d-star">⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-decoration">
+        <div class="decoration-circle circle-1"></div>
+        <div class="decoration-circle circle-2"></div>
+        <div class="decoration-circle circle-3"></div>
+    </div>
+</header>
+
+
+
+<!-- ROTATING 3D SERVICE CARDS -->
+<section id="services" class="services" style="background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%); padding: 100px 0;">
+    <div class="container">
+        <h2 class="section-title">What I Do</h2>
+        <p
+            style="text-align: center; color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Click any card to see full details
+        </p>
+
+        <!-- 3D Rotating Carousel -->
+        <div class="services-carousel-wrapper">
+            <div class="services-carousel-inner">
+                <!-- Card 1: YouTube Video Editing -->
+                <div class="service-card-3d" style="--index: 0; --color-card: 0, 217, 255;">
+                    <div class="service-card-3d-content">
+                        <div class="service-icon">🎬</div>
+                        <h3>YouTube Video Editing</h3>
+                        <p>Professional editing for vlogs, tutorials, gaming, and more. Fast cuts, smooth transitions,
+                            and engaging pacing.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Thumbnail Design -->
+                <div class="service-card-3d" style="--index: 1; --color-card: 0, 153, 255;">
+                    <div class="service-card-3d-content">
+                        <div class="service-icon">🖼️</div>
+                        <h3>Thumbnail Design</h3>
+                        <p>Eye-catching, click-worthy thumbnails that stand out. Proven designs that increase CTR by
+                            30-50%.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Social Media Content -->
+                <div class="service-card-3d" style="--index: 2; --color-card: 124, 58, 237;">
+                    <div class="service-card-3d-content">
+                        <div class="service-icon">📱</div>
+                        <h3>Social Media Content</h3>
+                        <p>Short-form content for Instagram Reels, TikTok, and YouTube Shorts. Optimized for mobile
+                            viewing.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Motion Graphics & VFX -->
+                <div class="service-card-3d" style="--index: 3; --color-card: 236, 72, 153;">
+                    <div class="service-card-3d-content">
+                        <div class="service-icon">✨</div>
+                        <h3>Motion Graphics & VFX</h3>
+                        <p>Dynamic text animations, lower thirds, transitions, and visual effects that add polish and
+                            professionalism.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Commercial & Ad Editing -->
+                <div class="service-card-3d" style="--index: 4; --color-card: 34, 197, 94;">
+                    <div class="service-card-3d-content">
+                        <div class="service-icon">🎯</div>
+                        <h3>Commercial & Ad Editing</h3>
+                        <p>High-impact promotional videos and advertisements designed to convert. Perfect for product
+                            launches.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Graphic Design -->
+                <div class="service-card-3d" style="--index: 5; --color-card: 249, 115, 22;">
+                    <div class="service-card-3d-content">
+                        <div class="service-icon">🎨</div>
+                        <h3>Graphic Design</h3>
+                        <p>Logos, banners, social media graphics, and brand assets. Complete visual identity solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE SHOWCASE SECTIONS - Full Width Detailed Services -->
+<section class="service-showcase" style="padding: 120px 0; background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%);">
+    <div class="container">
+        <div class="showcase-grid showcase-grid-reverse">
+            <div class="showcase-content">
+                <div class="showcase-label" style="color: var(--accent-yellow);">🎬 VIDEO EDITING</div>
+                <h2 class="showcase-title">Professional YouTube Editing<br>That Boosts Engagement</h2>
+                <p class="showcase-description">
+                    From fast-paced vlogs to cinematic tutorials, I deliver professional-grade edits that keep viewers hooked. Smart cuts, smooth transitions, and perfect pacing turn raw footage into content that performs.
+                </p>
+                <ul class="showcase-features">
+                    <li><strong>Fast Cuts & Smooth Transitions:</strong> Engaging pacing that maintains viewer attention</li>
+                    <li><strong>Color Grading & VFX:</strong> Cinematic look that stands out from competitors</li>
+                    <li><strong>Sound Design:</strong> Perfect audio sync and background music selection</li>
+                    <li><strong>Quick Turnaround:</strong> Fast delivery without compromising quality</li>
+                </ul>
+                <a href="#portfolio" class="btn btn-primary" style="margin-top: 2rem;">See Video Examples</a>
+            </div>
+            <div class="showcase-image">
+                <div class="showcase-img-wrapper" style="background-image: url('/static/images/maxresdefault.webp'); background-size: cover; background-position: center; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE SHOWCASE SECTION 2: REELS & SHORTS -->
+<section class="service-showcase" style="padding: 120px 0; background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%);">
+    <div class="container">
+        <div class="showcase-grid">
+            <div class="showcase-content">
+                <div class="showcase-label" style="color: var(--accent-blue-light);">📱 REELS & SHORTS</div>
+                <h2 class="showcase-title">Scroll-Stopping Short-Form<br>Content That Goes Viral</h2>
+                <p class="showcase-description">
+                    Instagram Reels, TikTok, and YouTube Shorts need a different approach. I specialize in creating addictive, mobile-first content optimized for maximum reach and engagement.
+                </p>
+                <ul class="showcase-features">
+                    <li><strong>Mobile-First Design:</strong> Optimized for vertical viewing across all platforms</li>
+                    <li><strong>Trending Audio Integration:</strong> Perfectly synced with trending sounds</li>
+                    <li><strong>Hook-First Editing:</strong> First 3 seconds designed to stop the scroll</li>
+                    <li><strong>Platform Optimization:</strong> Perfect specs for Instagram, TikTok & YouTube</li>
+                </ul>
+                <a href="#portfolio" class="btn btn-primary" style="margin-top: 2rem;">See Reel Portfolio</a>
+            </div>
+            <div class="showcase-image">
+                <div class="showcase-img-wrapper" style="background-image: url('/static/images/maxresdefault (1) (1).webp'); background-size: cover; background-position: center; border-radius: 20px; box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE SHOWCASE SECTION 3: THUMBNAILS -->
+<section class="service-showcase" style="padding: 120px 0; background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%);">
+    <div class="container">
+        <div class="showcase-grid showcase-grid-reverse">
+            <div class="showcase-content">
+                <div class="showcase-label" style="color: var(--accent-purple);">🖼️ THUMBNAIL DESIGN</div>
+                <h2 class="showcase-title">Click-Worthy Thumbnails<br>That Increase CTR 30-50%</h2>
+                <p class="showcase-description">
+                    A great thumbnail is your silent salesman. I design eye-catching, conversion-focused thumbnails that stand out in search results and feed, proven to boost click-through rates dramatically.
+                </p>
+                <ul class="showcase-features">
+                    <li><strong>Data-Driven Design:</strong> Based on what actually works for your niche</li>
+                    <li><strong>Bold Typography:</strong> Text that pops and gets read from distance</li>
+                    <li><strong>Emotional Hooks:</strong> Designs that trigger curiosity and clicks</li>
+                    <li><strong>Brand Consistency:</strong> Thumbnails that build your channel identity</li>
+                </ul>
+                <a href="#portfolio" class="btn btn-primary" style="margin-top: 2rem;">View Thumbnail Designs</a>
+            </div>
+            <div class="showcase-image">
+                <div class="showcase-img-wrapper" style="background-image: url('/static/images/maxresdefault (1) (2).webp'); background-size: cover; background-position: center; border-radius: 20px; box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE SHOWCASE SECTION 4: GRAPHIC DESIGN -->
+<section class="service-showcase" style="padding: 120px 0; background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%);">
+    <div class="container">
+        <div class="showcase-grid">
+            <div class="showcase-content">
+                <div class="showcase-label" style="color: var(--accent-yellow);">🎨 GRAPHIC DESIGN</div>
+                <h2 class="showcase-title">Complete Brand Visual Identity<br>That Stands Out</h2>
+                <p class="showcase-description">
+                    From logos to social graphics, I create cohesive visual identities that represent your brand powerfully. Every design element works together to build recognition and trust.
+                </p>
+                <ul class="showcase-features">
+                    <li><strong>Logo Design:</strong> Memorable marks that define your brand</li>
+                    <li><strong>Brand Guidelines:</strong> Complete visual systems for consistency</li>
+                    <li><strong>Social Templates:</strong> Ready-to-use designs for all platforms</li>
+                    <li><strong>Marketing Collateral:</strong> Banners, flyers, and promotional materials</li>
+                </ul>
+                <a href="#portfolio" class="btn btn-primary" style="margin-top: 2rem;">View Design Work</a>
+            </div>
+            <div class="showcase-image">
+                <div class="showcase-img-wrapper" style="background-image: url('/static/images/New thumbnail 2.jpg (2).jpeg'); background-size: cover; background-position: center; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio & Additional Sections -->
+{% include 'extended_sections.html' %}
+
+<!-- Features Grid Section (Process + Capabilities) -->
+
+<!-- About Section - Redesigned -->
+<section id="about" class="about" style="background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%); padding: 120px 0;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 class="section-title">Why Work With Me</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 1rem auto 0;">
+                I combine creative vision with technical precision to deliver content that doesn't just look good—it performs.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 4rem;">
+            <!-- Benefit 1 -->
+            <div style="padding: 2rem; border-radius: 20px; background: rgba(15, 15, 18, 0.6); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                <h3 style="color: var(--accent-yellow); margin-bottom: 0.5rem; font-size: 1.3rem;">Fast Turnaround</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">Quick delivery without compromising quality. Your projects get done on time, every time.</p>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div style="padding: 2rem; border-radius: 20px; background: rgba(15, 15, 18, 0.6); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+                <h3 style="color: var(--accent-blue-light); margin-bottom: 0.5rem; font-size: 1.3rem;">Results-Focused</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">Every edit, design, and thumbnail is optimized to boost engagement, CTR, and audience growth.</p>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div style="padding: 2rem; border-radius: 20px; background: rgba(15, 15, 18, 0.6); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤝</div>
+                <h3 style="color: var(--accent-purple); margin-bottom: 0.5rem; font-size: 1.3rem;">True Partnership</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">I'm invested in your success. Long-term collaboration beats one-off projects every time.</p>
+            </div>
+        </div>
+
+        <!-- Original About Content -->
+        <div class="about-flex" style="background: rgba(15, 15, 18, 0.6); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); margin-top: 3rem;">
+            <div class="about-image" style="flex: 0 0 40%; margin-right: 3rem;">
+                <div class="image-placeholder" style="background-image: url('/static/images/Thumbnail%203.jpg%20(2).jpeg'); background-size: cover; background-position: center; border-radius: 20px; padding: 2rem; height: 300px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+                    <span style="font-size: 3rem; font-weight: 900; color: var(--accent-yellow); text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);">4+ Yrs</span>
+                </div>
+            </div>
+            <div class="about-content" style="flex: 1;">
+                <h3 style="color: var(--accent-yellow); font-size: 1.2rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">About Me</h3>
+                <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    I'm a creative video editor and designer with 4+ years of professional experience, specializing in high-quality video edits, scroll-stopping thumbnails, and strategic graphic designs.
+                </p>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+                    I focus on creating visuals that not only look premium but also help creators and brands grow through better engagement, stronger retention, and a more powerful online presence.
+                </p>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                    If you're looking for someone who understands both creativity and results, I aim to be a reliable long-term partner for your content and brand growth.
+                </p>
+
+                <div class="tools">
+                    <h4 style="color: var(--accent-yellow); margin-bottom: 1rem; font-size: 1rem; text-transform: uppercase;">Tools & Skills</h4>
+                    <div class="tools-list" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <div style="padding: 0.7rem 1.5rem; background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 153, 255, 0.2)); border: 1px solid rgba(0, 217, 255, 0.3); border-radius: 50px; color: var(--text-main); font-weight: 600;">
+                            Adobe Premiere Pro
+                        </div>
+                        <div style="padding: 0.7rem 1.5rem; background: linear-gradient(135deg, rgba(0, 153, 255, 0.2), rgba(124, 58, 237, 0.2)); border: 1px solid rgba(0, 153, 255, 0.3); border-radius: 50px; color: var(--text-main); font-weight: 600;">
+                            Photoshop
+                        </div>
+                        <div style="padding: 0.7rem 1.5rem; background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(0, 217, 255, 0.2)); border: 1px solid rgba(124, 58, 237, 0.3); border-radius: 50px; color: var(--text-main); font-weight: 600;">
+                            CapCut
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section - Maxara Style -->
+<section id="contact" class="contact" style="background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%); padding: 120px 0;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 class="section-title">Let's Create Something Amazing</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 1rem auto 0;">
+                Ready to transform your vision into stunning visuals? Get in touch and let's start your next project.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto; align-items: start;">
+            <!-- Contact Info -->
+            <div>
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="color: var(--accent-yellow); font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Why reach out?</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                        Whether you need a one-time project or ongoing partnership, I'm here to discuss your vision and deliver exceptional results.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;"><span style="color: var(--accent-yellow); font-weight: 600;">📧 Email</span><br>Available for projects of all sizes</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;"><span style="color: var(--accent-yellow); font-weight: 600;">⚡ Quick Response</span><br>Typically within 24 hours</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;"><span style="color: var(--accent-yellow); font-weight: 600;">🎯 Clear Communication</span><br>Regular updates & transparency</p>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <h4 style="color: var(--accent-yellow); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">Connect With Me</h3>
+                    <div class="social-links" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#" class="social-link" style="padding: 0.7rem 1.5rem; background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 153, 255, 0.2)); border: 1px solid rgba(0, 217, 255, 0.3); border-radius: 50px; color: var(--accent-yellow); text-decoration: none; font-weight: 600; transition: all 0.3s ease;">YouTube</a>
+                        <a href="#" class="social-link" style="padding: 0.7rem 1.5rem; background: linear-gradient(135deg, rgba(0, 153, 255, 0.2), rgba(124, 58, 237, 0.2)); border: 1px solid rgba(0, 153, 255, 0.3); border-radius: 50px; color: var(--accent-blue-light); text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Instagram</a>
+                        <a href="#" class="social-link" style="padding: 0.7rem 1.5rem; background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(0, 217, 255, 0.2)); border: 1px solid rgba(124, 58, 237, 0.3); border-radius: 50px; color: var(--accent-purple); text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <form id="contact-form" class="contact-form" style="background: linear-gradient(135deg, rgba(15, 15, 18, 0.6), rgba(20, 20, 28, 0.6)); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <input type="text" id="name" placeholder="Your Name" required style="width: 100%; padding: 1rem; background: rgba(5, 5, 5, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: var(--text-main); font-size: 1rem; font-family: inherit; transition: all 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <input type="email" id="email" placeholder="Your Email" required style="width: 100%; padding: 1rem; background: rgba(5, 5, 5, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: var(--text-main); font-size: 1rem; font-family: inherit; transition: all 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <textarea id="message" placeholder="Tell me about your project..." required style="width: 100%; padding: 1rem; background: rgba(5, 5, 5, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: var(--text-main); font-size: 1rem; font-family: inherit; min-height: 150px; resize: vertical; transition: all 0.3s ease;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

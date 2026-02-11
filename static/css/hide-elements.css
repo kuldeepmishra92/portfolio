@@ -1,0 +1,24 @@
+/* Hide unwanted visual elements */
+
+/* Hide scroll progress bar */
+.scroll-progress {
+    display: none !important;
+}
+
+/* Hide floating 3D elements if any */
+.floating-element,
+.float-3d {
+    display: none !important;
+}
+
+/* Hide any decorative circles or lines */
+.decorative-circle,
+.decorative-line {
+    display: none !important;
+}
+
+/* Clean up any pseudo-elements that might be showing */
+section::before,
+section::after {
+    display: none !important;
+}

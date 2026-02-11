@@ -1,0 +1,59 @@
+/* CSS Variable Definitions - Maxara Modern Tech Theme */
+:root {
+    /* Maxara-Style Ultra Dark Backgrounds */
+    --bg-primary: #050505;
+    --bg-secondary: #0f0f12;
+    --bg-card: rgba(15, 15, 18, 0.9);
+    --bg-card-hover: rgba(15, 15, 18, 0.98);
+
+    /* Primary Cyan Accent (Maxara Style) */
+    --accent-yellow: #00d9ff;
+    --accent-yellow-dark: #00b8d4;
+    --accent-yellow-bright: #00f0ff;
+
+    /* Blue Accents */
+    --accent-blue: #0099ff;
+    --accent-blue-light: #33b3ff;
+    --accent-blue-dark: #0077cc;
+    
+    /* Purple Accents */
+    --accent-purple: #7c3aed;
+    --accent-purple-light: #a78bfa;
+    
+    /* Cyan Accent */
+    --accent-cyan: #00d9ff;
+    --accent-cyan-light: #00f0ff;
+
+    /* Glow Effects for Premium Feel */
+    --glow-yellow: 0 0 20px rgba(0, 217, 255, 0.5);
+    --glow-blue: 0 0 20px rgba(0, 153, 255, 0.5);
+    --glow-purple: 0 0 20px rgba(124, 58, 237, 0.5);
+    --accent-glow: rgba(0, 217, 255, 0.6);
+
+    /* Gradients - Maxara Style */
+    --gradient-primary: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%);
+    --gradient-blue: linear-gradient(135deg, #001a33 0%, #0099ff 100%);
+    --gradient-card: linear-gradient(135deg, rgba(15, 15, 18, 0.95) 0%, rgba(20, 20, 28, 0.95) 100%);
+    --gradient-accent: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+    --gradient-premium: linear-gradient(135deg, #00d9ff 0%, #0099ff 50%, #7c3aed 100%);
+
+    /* Text Colors */
+    --text-main: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --text-dark: #0f0f12;
+
+    /* Border Colors - Maxara Cyan */
+    --border-subtle: rgba(0, 217, 255, 0.1);
+    --border-medium: rgba(0, 217, 255, 0.2);
+    --border-accent: rgba(0, 217, 255, 0.3);
+
+    /* Fonts */
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+
+    /* Transitions */
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

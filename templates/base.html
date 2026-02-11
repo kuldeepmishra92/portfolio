@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Video Editor Portfolio{% endblock %}</title>
+    <meta name="description"
+        content="Professional Video Editor and Graphic Designer with 4 years of experience specializing in high-quality video edits, scroll-stopping thumbnails, and clean graphic designs.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hero-enhanced.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hero-3d.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modern-2026.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/service-carousel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/service-modal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/service-showcase.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/section-fixes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hide-elements.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">PORTFOLIO</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #050505 0%, #0f0f12 100%); padding: 80px 0 40px; border-top: 1px solid rgba(0, 217, 255, 0.1);">
+        <div class="container">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; margin-bottom: 3rem;">
+                <!-- Brand Column -->
+                <div class="footer-col">
+                    <h3 class="footer-logo" style="font-size: 1.5rem; color: var(--accent-yellow); margin-bottom: 1rem; font-weight: 900;">PORTFOLIO</h3>
+                    <p class="footer-desc" style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem;">
+                        Crafting high-impact visuals that turn views into loyal audiences. Premium video editing, graphic design, and content creation.
+                    </p>
+                    <p class="footer-tagline" style="color: var(--accent-yellow); font-weight: 700; font-size: 0.9rem;">Video Editor • Graphic Designer</p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-col">
+                    <h4 style="color: var(--text-main); margin-bottom: 1.5rem; font-weight: 700; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 1px;">Navigation</h4>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><a href="#home" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">Home</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#portfolio" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">Portfolio</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#about" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">About</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#contact" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-col">
+                    <h4 style="color: var(--text-main); margin-bottom: 1.5rem; font-weight: 700; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 1px;">Services</h4>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">YouTube Editing</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">Reels & Shorts</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">Thumbnails</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s ease;">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect Column -->
+                <div class="footer-col">
+                    <h4 style="color: var(--text-main); margin-bottom: 1.5rem; font-weight: 700; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 1px;">Connect</h4>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <a href="#" target="_blank" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 153, 255, 0.2)); border: 1px solid rgba(0, 217, 255, 0.3); border-radius: 50%; color: var(--accent-yellow); transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" target="_blank" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0, 153, 255, 0.2), rgba(124, 58, 237, 0.2)); border: 1px solid rgba(0, 153, 255, 0.3); border-radius: 50%; color: var(--accent-blue-light); transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(0, 217, 255, 0.2)); border: 1px solid rgba(124, 58, 237, 0.3); border-radius: 50%; color: var(--accent-purple); transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Ready to start your project? <a href="#contact" style="color: var(--accent-yellow); text-decoration: none; font-weight: 600;">Get in touch</a></p>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div style="border-top: 1px solid rgba(0, 217, 255, 0.1); padding-top: 2rem; text-align: center;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    © 2026 Premium Video & Design. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Go to top">↑</button>
+
+    <!-- Scripts -->
+    <!-- VanillaTilt Library for 3D Effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modern-2026.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/service-carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hero-3d.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+
+</html>

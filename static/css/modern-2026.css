@@ -1,0 +1,553 @@
+/* 2026 Modern Portfolio - Advanced Styles */
+
+/* Animated Gradient Mesh Background */
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes float3D {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateZ(0px) rotateX(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) translateZ(20px) rotateX(5deg);
+    }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-yellow);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.15s ease;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor.hover {
+    width: 50px;
+    height: 50px;
+    background: rgba(251, 191, 36, 0.1);
+    border-color: var(--accent-blue-light);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-yellow), var(--accent-blue-light));
+    z-index: 9999;
+    transform-origin: left;
+    transition: width 0.1s ease-out;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(15, 15, 18, 0.4);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* 3D Tilt Effect */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)) scale(1.05);
+}
+
+.tilt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(251, 191, 36, 0.1) 0%,
+            rgba(59, 130, 246, 0.1) 100%);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tilt-card:hover::before {
+    opacity: 1;
+}
+
+/* Magnetic Button Effect */
+.magnetic-btn {
+    position: relative;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Floating Elements */
+.floating-element {
+    animation: float3D 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.floating-element:nth-child(3) {
+    animation-delay: 4s;
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.bento-item {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Bento Grid Sizes */
+.bento-large {
+    grid-column: span 6;
+    grid-row: span 2;
+    min-height: 500px;
+}
+
+.bento-medium {
+    grid-column: span 4;
+    grid-row: span 1;
+    min-height: 250px;
+}
+
+.bento-small {
+    grid-column: span 3;
+    grid-row: span 1;
+    min-height: 200px;
+}
+
+.bento-wide {
+    grid-column: span 8;
+    grid-row: span 1;
+    min-height: 300px;
+}
+
+/* Hover Effects for Bento Items */
+.bento-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(251, 191, 36, 0.2),
+        0 0 40px rgba(59, 130, 246, 0.2);
+}
+
+.bento-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(59, 130, 246, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bento-item:hover::after {
+    opacity: 1;
+}
+
+/* Smooth Scroll Reveal */
+.reveal-2026 {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-2026.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Staggered Animation */
+.reveal-2026:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.reveal-2026:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.reveal-2026:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.reveal-2026:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.reveal-2026:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.reveal-2026:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+/* Testimonials: keep client info aligned across cards */
+.testimonials-grid .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.testimonial-card .client-info {
+    margin-top: 1rem;
+}
+
+/* 3D Testimonial Cards */
+.testimonial-parent {
+    perspective: 1000px;
+    height: 100%;
+}
+
+.testimonial-3d-card {
+    padding-top: 0;
+    border: 2px solid rgba(251, 191, 36, 0.3);
+    transform-style: preserve-3d;
+    background-color: rgba(5, 5, 5, 0.6);
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(251, 191, 36, 0.2) 0px 30px 30px -10px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-3d-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(251, 191, 36, 0.1) 15px,
+        rgba(251, 191, 36, 0.1) 30px
+    );
+    pointer-events: none;
+    border-radius: 18px 18px 0 0;
+}
+
+.testimonial-3d-card:hover {
+    transform: rotate3d(0.5, 1, 0, 20deg);
+    box-shadow: rgba(251, 191, 36, 0.4) 0px 40px 50px -10px;
+}
+
+.testimonial-content-box {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(51, 65, 85, 0.95));
+    padding: 30px 25px 0 25px;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-content-box .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    transform-style: preserve-3d;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate3d(0px, 0px, 30px);
+}
+
+.testimonial-3d-card:hover .profile-section {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+.testimonial-content-box .stars {
+    font-size: 1.3rem;
+    color: var(--accent-yellow);
+    margin-bottom: 1rem;
+    transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, 30px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-3d-card:hover .stars {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+.testimonial-content-box .testimonial-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 0;
+    transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, 20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-3d-card:hover .testimonial-text {
+    transform: translate3d(0px, 0px, 40px);
+}
+
+.avatar-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(135deg, var(--accent-yellow), #f59e0b);
+    border: 2px solid rgba(251, 191, 36, 0.6);
+    padding: 10px;
+    transform: translate3d(0px, 0px, 80px);
+    box-shadow: rgba(251, 191, 36, 0.3) 0px 17px 10px -10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #050505;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-3d-card:hover .avatar-box {
+    transform: translate3d(0px, 0px, 100px);
+    box-shadow: rgba(251, 191, 36, 0.5) 0px 25px 20px -5px;
+}
+
+/* 3D Process Cards */
+.process-parent {
+    perspective: 1000px;
+    height: 100%;
+    overflow: visible;
+    width: 100%;
+    min-height: 320px;
+}
+
+.process-3d-card {
+    height: 100%;
+    width: 100%;
+    min-height: 320px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.3) 0%, rgba(59, 130, 246, 0.3) 100%);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    box-shadow: rgba(251, 191, 36, 0.1) 40px 50px 25px -40px, rgba(251, 191, 36, 0.15) 0px 25px 25px -5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding: 0;
+}
+
+.process-glass {
+    transform-style: preserve-3d;
+    position: absolute;
+    inset: 8px;
+    border-radius: 55px;
+    border-top-right-radius: 100%;
+    background: linear-gradient(0deg, rgba(251, 191, 36, 0.1) 0%, rgba(59, 130, 246, 0.15) 100%);
+    backdrop-filter: blur(5px);
+    transform: translate3d(0px, 0px, 25px);
+    border-left: 1px solid rgba(251, 191, 36, 0.2);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.process-content {
+    padding: 40px 30px 30px 30px;
+    transform: translate3d(0, 0, 26px);
+    transform-style: preserve-3d;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow: visible;
+    word-wrap: break-word;
+    word-break: break-word;
+    min-height: 280px;
+}
+
+.process-logo .step-number {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    color: var(--accent-yellow);
+    font-weight: 900;
+    font-size: 2.5rem;
+    transform: translate3d(0, 0, 100px);
+    pointer-events: none;
+    font-style: normal;
+    font-variant: normal;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    filter: blur(0px);
+}
+
+.process-content .title {
+    display: block;
+    color: var(--text-main);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    line-height: 1.4;
+}}
+
+.process-content .text {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+}}
+
+.process-logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+.process-logo .circle {
+    display: block;
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    background: rgba(251, 191, 36, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.process-logo .circle1 {
+    width: 140px;
+    transform: translate3d(0, 0, 20px);
+    top: 8px;
+    right: 8px;
+}
+
+.process-logo .circle2 {
+    width: 110px;
+    transform: translate3d(0, 0, 40px);
+    top: 10px;
+    right: 10px;
+    transition-delay: 0.2s;
+}
+
+.process-logo .circle3 {
+    width: 80px;
+    transform: translate3d(0, 0, 60px);
+    top: 17px;
+    right: 17px;
+    transition-delay: 0.4s;
+}
+
+.process-logo .circle4 {
+    width: 50px;
+    transform: translate3d(0, 0, 80px);
+    top: 23px;
+    right: 23px;
+    display: grid;
+    place-content: center;
+    transition-delay: 0.6s;
+}
+
+.process-parent:hover .process-3d-card {
+    transform: rotate3d(1, 1, 0, 25deg);
+    box-shadow: rgba(251, 191, 36, 0.25) 30px 50px 25px -40px, rgba(251, 191, 36, 0.1) 0px 25px 30px 0px;
+}
+
+.process-parent:hover .process-3d-card .process-logo .circle2 {
+    transform: translate3d(0, 0, 60px);
+}
+
+.process-parent:hover .process-3d-card .process-logo .circle3 {
+    transform: translate3d(0, 0, 80px);
+}
+
+.process-parent:hover .process-3d-card .process-logo .circle4 {
+    transform: translate3d(0, 0, 100px);
+}
+
+/* Responsive Bento Grid */
+@media (max-width: 1024px) {
+
+    .bento-large,
+    .bento-medium,
+    .bento-small,
+    .bento-wide {
+        grid-column: span 12;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        gap: 1rem;
+    }
+
+    .bento-item {
+        min-height: 200px !important;
+    }
+}

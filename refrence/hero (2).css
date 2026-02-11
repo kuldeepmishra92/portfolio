@@ -1,0 +1,222 @@
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-bg-layer {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 70%);
+    z-index: -1;
+    transform: translateZ(-50px);
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    transform-style: preserve-3d;
+}
+
+/* Hero Text */
+.hero-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.greeting {
+    font-family: var(--font-mono);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.glitch-name {
+    font-size: 8rem;
+    line-height: 0.9;
+    color: white;
+    text-shadow: 2px 2px var(--color-primary);
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+/* 3D PFP Card */
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.pfp-card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.pfp-card img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+    transform: translateZ(50px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-primary);
+}
+
+/* Holographic Border Effect */
+.card-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(20px);
+    width: 95%;
+    height: 95%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.card-doodles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translateZ(80px);
+    /* Highest Z for parallax */
+}
+
+.doodle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: white;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px var(--color-primary));
+}
+
+.d-eye {
+    top: 30%;
+    right: -20px;
+    width: 100px;
+    transform: rotate(10deg);
+}
+
+.d-arrow {
+    bottom: 10%;
+    left: -30px;
+    transform: rotate(-20deg);
+}
+
+/* Role Scroller */
+.role-scroller {
+    font-family: var(--font-mono);
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.role {
+    display: block;
+    height: 30px;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    animation: scrollRoles 6s infinite steps(1);
+    /* Ideally we'd use JS or keyframes to slide them up */
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.5;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        top: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 30px;
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .glitch-name {
+        font-size: 4rem;
+    }
+
+    .hero-visual {
+        margin-top: 3rem;
+    }
+
+    .pfp-card {
+        width: 300px;
+        height: 380px;
+    }
+}

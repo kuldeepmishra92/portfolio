@@ -1,0 +1,90 @@
+/* Fix for Section Height Issues - Prevent Content Cutting */
+
+/* Remove fixed heights and allow natural flow */
+.hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 140px 0 100px !important;
+}
+
+.services {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 120px 0 !important;
+}
+
+.portfolio {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 120px 0 !important;
+}
+
+.about {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 120px 0 !important;
+}
+
+.contact {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 120px 0 !important;
+}
+
+/* Ensure containers expand properly */
+.container {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* Fix for carousel wrapper */
+.services-carousel-wrapper {
+    height: 800px !important;
+    min-height: 800px !important;
+    margin-bottom: 0 !important;
+    padding: 50px 0 !important;
+}
+
+.services {
+    padding: 100px 0 80px !important;
+}
+
+/* Ensure all sections have proper overflow */
+section {
+    overflow: visible !important;
+}
+
+/* Fix for extended sections */
+#portfolio-bento {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.testimonials {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.process {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 60px !important;
+    }
+
+    .services,
+    .portfolio,
+    .about,
+    .contact {
+        padding: 80px 0 !important;
+    }
+
+    .services-carousel-wrapper {
+        height: 500px !important;
+        min-height: 500px !important;
+    }
+}

@@ -1,0 +1,141 @@
+1. Purpose of Website
+I need a professional, high-quality portfolio website designed to showcase my skills and work in a premium way, build strong credibility, and attract serious clients for long-term and high-value projects.
+
+2. My Profession
+
+Video Editing
+
+YouTube Thumbnail Design
+
+Graphic Design
+
+3. Overall Style & UI Feel
+
+UI Style: Futuristic / Modern / Premium
+
+Theme: Dark
+
+Feel: High-quality, tech / cyber inspired
+
+Animations: Smooth, clean, premium (not over-heavy)
+
+4. Color Preference
+
+Background: Black / Dark Grey
+
+Accent Color: Purple (neon / glow effect)
+
+5. Fonts Preference
+
+Clean, modern, professional fonts
+
+Fonts: Poppins / Orbitron 
+
+6. Pages I Need
+
+Home
+
+Portfolio (Video Editing, Thumbnails, Graphic Design)
+
+Services
+
+About Me
+
+Contact
+
+7. Home Page Requirements
+
+Strong hero section with futuristic UI
+
+Punchline text:
+
+“Crafting High-Impact Visuals That Turn Views Into Loyal Audiences.”
+
+CTA Button: View Work / Hire Me
+
+8. Portfolio Section Details
+
+Video Editing
+
+Showreel: Yes
+
+Platforms:
+
+YouTube
+
+Instagram
+
+Facebook
+
+Thumbnails
+
+Clean, premium presentation
+
+Graphic Design
+
+Selected best works
+
+Card / grid based layout
+
+9. Services to Show
+
+YouTube Video Editing
+
+Shorts / Reels Editing
+
+Thumbnail Design
+
+Graphic Design
+
+10. About Me Content
+
+Intro (final text):
+
+I am a creative video editor and designer with 4 years of professional experience, specializing in high-quality video edits, scroll-stopping thumbnails, and clean graphic designs.
+
+I focus on creating visuals that not only look premium but also help creators and brands grow through better engagement, stronger retention, and a more powerful online presence.
+
+If you are looking for someone who understands both creativity and results, I aim to be a reliable long-term partner for your content and brand growth.
+
+Experience:
+
+4 Years of Professional Experience
+
+Tools I Use:
+
+Adobe Premiere Pro
+
+CapCut (PC)
+
+Adobe Photoshop
+
+11. Contact Section
+
+Contact Form: Yes
+
+Email & social links
+
+CTA line:
+“Let’s create something powerful together.”
+
+12. Technical Expectations
+
+Fast loading
+
+Fully mobile responsive
+
+SEO-friendly structure
+
+Easy to update in future
+
+13. Assets I Will Provide
+
+Logo
+
+Videos
+
+Thumbnails
+
+Graphic Design work
+
+All required text content

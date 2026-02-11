@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio" style="padding-top: 150px; background: linear-gradient(135deg, #050505 0%, #0f0f12 50%, #050505 100%); min-height: 100vh;">
+    <div class="container">
+        <h2 class="section-title">My Work</h2>
+        <div class="filter-btns">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="video">Video Editing</button>
+            <button class="filter-btn" data-filter="thumbnail">Thumbnails</button>
+            <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Video Editing - YouTube -->
+            <div class="portfolio-item" data-category="video">
+                <div class="portfolio-content">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-overlay">
+                            <span>Play YouTube Showreel</span>
+                        </div>
+                        <div class="placeholder-img video-placeholder">YouTube Video</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Documentary Style Edit</h3>
+                        <p>YouTube • High Engagement</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Editing - Reels -->
+            <div class="portfolio-item" data-category="video">
+                <div class="portfolio-content">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-overlay">
+                            <span>Watch Reel</span>
+                        </div>
+                        <div class="placeholder-img video-placeholder">Instagram Reel</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Viral Shorts Edit</h3>
+                        <p>Instagram / Facebook Reels</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Item 1 -->
+            <div class="portfolio-item" data-category="thumbnail">
+                <div class="portfolio-content">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-overlay">
+                            <span>View Design</span>
+                        </div>
+                        <div class="placeholder-img thumbnail-placeholder">MrBeast Style</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>High-CTR Gaming</h3>
+                        <p>YouTube Thumbnail</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Item 2 -->
+            <div class="portfolio-item" data-category="thumbnail">
+                <div class="portfolio-content">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-overlay">
+                            <span>View Design</span>
+                        </div>
+                        <div class="placeholder-img thumbnail-placeholder">Fitness Vibe</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Educational Thumbnail</h3>
+                        <p>Clean & Professional</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphic Design Item 1 -->
+            <div class="portfolio-item" data-category="graphic">
+                <div class="portfolio-content">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-overlay">
+                            <span>View Work</span>
+                        </div>
+                        <div class="placeholder-img graphic-placeholder">Brand Identity</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Tech Startup Branding</h3>
+                        <p>Logo & Visual Identity</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphic Design Item 2 -->
+            <div class="portfolio-item" data-category="graphic">
+                <div class="portfolio-content">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-overlay">
+                            <span>View Work</span>
+                        </div>
+                        <div class="placeholder-img graphic-placeholder">Poster Design</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Event Marketing</h3>
+                        <p>Graphic Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
